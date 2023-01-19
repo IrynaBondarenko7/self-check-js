@@ -288,3 +288,137 @@
 //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 
 // }
+
+//2) оператор spread-right side
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   let newTask = {
+//     category: "General",
+//     priority: "Normal",
+//     ...data,
+//     completed,
+//   };
+//   return newTask;
+//   // Change code above this line
+// }
+// console.log(
+//   makeTask({
+//     category: "Homemade",
+//     priority: "Low",
+//     text: "Take out the trash",
+//   })
+// ); //{ category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+// console.log(makeTask({})); //{ category: "General", priority: "Normal", completed: false }
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+// //{ category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+
+//3)The ... (rest) operation - left side
+// повернути суму аргуметнів
+// function add(...args) {
+//   let sum = 0;
+//   for (const arg of args) {
+//     sum += arg;
+//   }
+//   return sum;
+// }
+// console.log(add(32, 6, 13, 19, 8)); //78
+// console.log(add(74, 11, 62, 46, 12, 36)); //241
+
+//4)
+// function addOverNum(firstNumber, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > firstNumber) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+// }
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8)); //71
+// console.log(addOverNum(15, 32, 6, 13, 19, 8)); //51
+
+//5)
+
+// function findMatches(array, ...args) {
+//   const matches = []; // Don't change this line
+
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       matches.push(element);
+//     }
+//   }
+//   return matches;
+// }
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)); //[1, 2]
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2)); //[17, 89, 2]
+
+//6)метод змінював назву книги з oldName на newName у властивості books
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+
+//   updateBook(oldName, newName) {
+//     let indexOld = this.books.indexOf(oldName);
+
+//     this.books.splice(indexOld, 1, newName);
+//   },
+// };
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+// console.log(bookShelf.books);
+
+//7) Корзина замовлень
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (let potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     const { potions } = this;
+//     for (let i = 0; i < potions.length; i += 1) {
+//       const { name } = potions[i];
+
+//       if (name === potionName) {
+//         potions.splice(i, 1);
+//         return;
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     let { potions } = this;
+//     for (let potion of potions) {
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//         return;
+//       }
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+// };
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+// console.log(atTheOldToad.getPotions());
