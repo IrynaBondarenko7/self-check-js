@@ -45,10 +45,58 @@
 // }
 // console.log(countSheeps(arrayOfSheep));
 
-//2)аргумент перетворити в буль і повернути цей буль як рядок
+//3)аргумент перетворити в буль і повернути цей буль як рядок
 // function booleanToString(b) {
 //   const result = Boolean(b);
 //   return String(result);
 // }
 
 // console.log(booleanToString(true));
+
+//4)We need a function that can transform a number (integer) into a string.
+
+// function numberToString(num) {
+//   return String(num);
+// }
+// console.log(200);
+
+//5)
+
+// function basicOp(operation, value1, value2) {
+//   // Code
+
+//   if (operation === "+") {
+//     return value1 + value2;
+//   } else if (operation === "-") {
+//     return value1 - value2;
+//   } else if (operation === "*") {
+//     return value1 * value2;
+//   } else if (operation === "/") {
+//     return value1 / value2;
+//   }
+// }
+// console.log(basicOp("+", 4, 7));
+
+// //or
+// function basicOp(operation, value1, value2) {
+//   switch (operation) {
+//     case "+":
+//       return value1 + value2;
+//     case "-":
+//       return value1 - value2;
+//     case "*":
+//       return value1 * value2;
+//     case "/":
+//       return value1 / value2;
+//   }
+// }
+
+//6) Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+// function repeatStr(n, s) {
+//   return `${s.repeat(n)}`;
+// }
+
+// console.log(repeatStr(3, "#"));
+
+//or
+// repeatStr = (n, s) => s.repeat(n);
