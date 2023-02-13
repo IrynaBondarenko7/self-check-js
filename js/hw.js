@@ -111,4 +111,53 @@
 // const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
 // console.log(myStr); //кожний рядок починається з нового рядка
 
+// const countWords = (words) => {
+//   return words.reduce((acc, val) => {
+//     acc[val] = (acc[val] || 0) + 1;
+//     return acc;
+//   }, {});
+// };
+// const result = countWords(["Apple", "Banana", "Banana", "Orange"]);
+// console.log(result); // {Apple: 1, Banana: 2, Orange: 1}
 
+// function updateRecords(records, id, prop, value) {
+//   for (const key in records) {
+//     let arrayTracs = [];
+//     if (key == id) {
+//       switch (prop) {
+//         case "artist":
+//           records[key][prop] = value;
+//           //   console.log(records[key][prop]);
+//           break;
+//         case "tracks":
+//           for (const key1 in records[key]) {
+//             // console.log(records[key]);// object 2468
+//             // console.log(records[key][prop]);
+//             console.log(key1);
+//             if (key1 === "tracks") {
+//               const isTracs = records[key][prop];
+
+//               isTracs.push(value);
+//             } else if (key1 === "albumTitle") {
+//             } else if (key1 === "artist") {
+//             } else {
+//               records[key][prop] = arrayTracs;
+//               arrayTracs.push(value);
+//             }
+//           }
+//           records[key][prop] = arrayTracs;
+//           arrayTracs.push(value);
+//           break;
+//         case "albumTitle":
+//           records[key][prop] = value;
+//           break;
+//       }
+//     } else {
+//     }
+//     if (value === "") {
+//       delete records[key][prop];
+//     }
+//   }
+
+//   return records;
+// }
